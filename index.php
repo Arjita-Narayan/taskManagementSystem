@@ -10,17 +10,16 @@
 <body>
   
     <div class="form-box">
-         <form id="myForm" action="data.php" method="POST">
+         <form id="myForm" action="db_conn.php" method="POST">
 
           <div id="loginForm">
             <i class="fa-regular fa-user"></i>
-            <input type="text" name="emaail/phone number" placeholder="email/phone number" id="email/phonenumber"><br><br>
+            <input type="text" name="email" placeholder="email" id="email"><br><br>
 
             <i class="fa-solid fa-key"></i>
             <input type="password" name="password" placeholder="password" id="password"><br><br>
 
-            <button type="submit" id="login-btn">LOG IN</button><br><br>
-
+            <input type="submit" id="login-btn" value="LOG IN"></button><br><br>
             <button type="button" onclick="toggleForm()">CREATE NEW ACCOUNT</button><br><br>
           </div>
 
@@ -39,20 +38,19 @@
              <input type="password" id="new_password" name="new_password" required><br><br>
 
              <label for="date_of_birth">Date of Birth:</label>
-             <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>              <button type="submit" onclick="toggleForm()">SIGN UP</button>
+             <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>              <button type="submit" id="signup" onclick="toggleForm()">SIGN UP</button>
           </div>
 
          </form>
     </div>
     <script>
         function toggleForm() {
-            var logininForm = document.getElementById("loginForm");
+            var loginForm = document.getElementById("loginForm");
             var signupForm = document.getElementById("signup-form");
 
             loginForm.style.display = (loginForm.style.display === "none") ? "block" : "none";
             signupForm.style.display = (signupForm.style.display === "none") ? "block" : "none";
         }
     </script>
-    
 </body>
 </html>
